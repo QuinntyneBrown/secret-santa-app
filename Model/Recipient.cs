@@ -1,10 +1,6 @@
 using System;
-using System.Collections.Generic;
 using SecretSantaApp.Data.Helpers;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
-using static SecretSantaApp.Constants;
 
 namespace SecretSantaApp.Model
 {
@@ -15,13 +11,15 @@ namespace SecretSantaApp.Model
         
 		[ForeignKey("Tenant")]
         public int? TenantId { get; set; }
-        
-		[Index("RecipientNameIndex", IsUnique = false)]
-        [Column(TypeName = "VARCHAR")]     
-        [StringLength(MaxStringLength)]		   
-		public string Name { get; set; }
-        
-		public DateTime CreatedOn { get; set; }
+
+        [ForeignKey("Profile")]
+        public int? ProfileId { get; set; }
+
+        public string Firstname { get; set; }
+
+        public string Lastname { get; set; }
+
+        public DateTime CreatedOn { get; set; }
         
 		public DateTime LastModifiedOn { get; set; }
         
@@ -32,5 +30,7 @@ namespace SecretSantaApp.Model
 		public bool IsDeleted { get; set; }
 
         public virtual Tenant Tenant { get; set; }
+        
+        public virtual Profile Profile { get; set; }
     }
 }
