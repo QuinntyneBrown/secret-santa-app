@@ -40,8 +40,6 @@ namespace SecretSantaApp
             app.Use(typeof(StatusMiddleware));
 
             config.Filters.Add(new HandleErrorAttribute(container.Resolve<ILoggerFactory>()));
-
-            
             
             config.SuppressHostPrincipal();
 

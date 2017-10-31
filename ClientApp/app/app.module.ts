@@ -5,7 +5,7 @@ import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 
-import {HomeModule} from "../app/home/home.module";
+import {PagesModule} from "../app/pages/pages.module";
 import {SharedModule} from "../app/shared";
 import {UsersModule} from "../app/users/users.module";
 import {TenantsModule} from "../app/tenants/tenants.module";
@@ -29,7 +29,7 @@ const providers = [];
         FormsModule,
         RouterModule,
 
-        HomeModule,
+        PagesModule,
         SharedModule,
         TenantsModule,
         UsersModule
