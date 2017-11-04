@@ -8,10 +8,10 @@ import {
     RouterStateSnapshot
 } from '@angular/router';
 
-import { Storage } from "../shared/services/storage.service";
+import { Storage } from "../services/storage.service";
 import { Observable } from "rxjs";
-import { constants } from "../shared/constants";
-import { UsersService } from "./users.service";
+import { constants } from "../constants";
+import { UsersService } from "../services/users.service";
 
 @Injectable()
 export class CurrentUserGuardService implements CanActivate {

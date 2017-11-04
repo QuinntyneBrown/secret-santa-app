@@ -17,7 +17,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 @Component({
     templateUrl: "./set-tenant-form.component.html",
     styleUrls: [
-        "../../styles/forms.css",
+        "../../../styles/forms.css",
         "./set-tenant-form.component.css"
     ],
     selector: "ce-set-tenant-form"

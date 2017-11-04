@@ -45,7 +45,14 @@ const declarables = [
 const providers = [];
 
 @NgModule({
-    imports: [CommonModule, FormsModule, HttpClientModule, ReactiveFormsModule, RouterModule.forChild(PAGE_ROUTES), SharedModule, UsersModule],
+    imports: [
+        CommonModule,
+        FormsModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        RouterModule.forChild(PAGE_ROUTES),
+        SharedModule
+        ],
     exports: [declarables],
     declarations: [declarables],
     providers: providers

@@ -7,8 +7,6 @@ import {FormsModule} from '@angular/forms';
 
 import {PagesModule} from "../app/pages/pages.module";
 import {SharedModule} from "../app/shared";
-import {UsersModule} from "../app/users/users.module";
-import {TenantsModule} from "../app/tenants/tenants.module";
 
 import {AppComponent} from './app.component';
 
@@ -30,10 +28,7 @@ const providers = [];
         RouterModule,
 
         PagesModule,
-        SharedModule,
-        TenantsModule,
-        UsersModule
-
+        SharedModule
     ],
     providers: providers,
     declarations: [declarables],

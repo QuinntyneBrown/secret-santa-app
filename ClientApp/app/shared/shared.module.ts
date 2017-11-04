@@ -2,6 +2,7 @@ import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http";
+import {ReactiveFormsModule,FormsModule} from "@angular/forms";
 
 import {AuthenticationService} from "./services/authentication.service";
 import {CorrelationIdsList} from "./services/correlation-ids-list";
@@ -31,6 +32,8 @@ import {TabTitleComponent} from "./components/tab-title.component";
 import {TabsComponent} from "./components/tabs.component";
 import {ModalWindowComponent} from "./components/modal-window.component";
 import {BackdropComponent} from "./components/backdrop.component";
+import {LoginComponent} from "./components/login.component";
+import {SetTenantFormComponent} from "./components/set-tenant-form.component";
 
 const providers = [
     EventHub,
@@ -72,11 +75,13 @@ const declarables = [
     TabTitleComponent,
     TabsComponent,
     ModalWindowComponent,
-    BackdropComponent
+    BackdropComponent,
+    LoginComponent,
+    SetTenantFormComponent
 ];
 
 @NgModule({
-    imports: [CommonModule, RouterModule, HttpClientModule],
+    imports: [CommonModule, RouterModule, HttpClientModule, ReactiveFormsModule, FormsModule],
     entryComponents: [ModalWindowComponent,BackdropComponent],
     declarations: [declarables],
     exports:[declarables],
