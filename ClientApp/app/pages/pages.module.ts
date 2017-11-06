@@ -9,6 +9,8 @@ import { HomePageComponent } from "./home-page.component";
 import { AdminPageComponent } from "./admin-page.component";
 import { LoginPageComponent } from "./login-page.component";
 import { SetTenantPageComponent } from "./set-tenant-page.component";
+import { RegisterationPageComponent } from "./registeration-page.component";
+
 
 export const PAGE_ROUTES: Routes = [{
     path: '',
@@ -33,6 +35,10 @@ export const PAGE_ROUTES: Routes = [{
     component: SetTenantPageComponent,
     canActivate: [
     ]
+}, {
+    path: "register",
+    component: RegisterationPageComponent,
+    canActivate: []
 }];
 
 const declarables = [

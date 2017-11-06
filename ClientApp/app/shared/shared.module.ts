@@ -34,6 +34,7 @@ import {ModalWindowComponent} from "./components/modal-window.component";
 import {BackdropComponent} from "./components/backdrop.component";
 import {LoginComponent} from "./components/login.component";
 import {SetTenantFormComponent} from "./components/set-tenant-form.component";
+import {RegistrationFormComponent} from "./components/registration-form.component";
 
 const providers = [
     EventHub,
@@ -77,7 +78,8 @@ const declarables = [
     ModalWindowComponent,
     BackdropComponent,
     LoginComponent,
-    SetTenantFormComponent
+    SetTenantFormComponent,
+    RegistrationFormComponent
 ];
 
 @NgModule({
