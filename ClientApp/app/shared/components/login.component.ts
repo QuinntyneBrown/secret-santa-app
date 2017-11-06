@@ -51,7 +51,8 @@ export class LoginComponent implements AfterViewInit {
     @Input()
     public rememberMe: boolean;
 
-    @Output() public tryToLogin: EventEmitter<any>;
+    @Output()
+    public tryToLogin: EventEmitter<any>;
 
     public form = new FormGroup({
         username: new FormControl('', [Validators.required]),

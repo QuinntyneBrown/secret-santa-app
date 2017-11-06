@@ -15,6 +15,7 @@ import {Ruler} from "./services/ruler";
 import {Position} from "./services/position";
 import {Space} from "./services/space";
 import {ModalService} from "./services/modal.service";
+import {RecipientService} from "./services/recipient.service";
 
 import {AuthGuardService} from "./guards/auth-guard.service"
 import {TenantGuardService} from "./guards/tenant-guard.service";
@@ -51,6 +52,7 @@ const providers = [
     Ruler,
     Position,
     ModalService,
+    RecipientService,
     {
         provide: HTTP_INTERCEPTORS,
         useClass: JwtInterceptor,

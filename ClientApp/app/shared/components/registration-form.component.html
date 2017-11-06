@@ -1,0 +1,6 @@
+<form novalidate [formGroup]="form">
+    <label>Email</label>
+    <input type="text" placeholder="Email" id="email" formControlName="email" />
+
+    <button type="submit" (click)="register.emit({ value: form.value })">Login</button>
+</form>
